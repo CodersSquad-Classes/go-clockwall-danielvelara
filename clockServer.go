@@ -24,7 +24,7 @@ func main() {
 	var port = flag.Int("port", 9090, "Provide a connection port")
 	flag.Parse()
 
-	listener, err := net.Listen("tcp", "localhost:" + strconv.FormatInt(int64(*port), 10))
+	listener, err := net.Listen("tcp", "0.0.0.0:" + strconv.FormatInt(int64(*port), 10))
 	if err != nil {
 		log.Fatal(err)
 	}
